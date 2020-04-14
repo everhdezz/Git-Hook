@@ -24,6 +24,6 @@ class oAuth
     function validate_content(){
     	$request = new Request;
 
-    	return $this->token === hash_hmac($this->method??'sha1', $request->getContent(), $_ENV->get('TOKEN'));
+    	return self::$token === hash_hmac(self::$method??'sha1', $request->getContent(), $_ENV->get('TOKEN'));
     }
 }
