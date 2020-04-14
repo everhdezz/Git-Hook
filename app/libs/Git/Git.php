@@ -30,6 +30,7 @@ class Git {
     }
 
     function exec($command){
-        exec( "cd $this->dir && $command > $this->dir/custom.log &" );
+        exec( "cd $this->dir && sudo su && $command 2>&1", $output );
+        print_r($output);
     }
 }
