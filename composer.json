@@ -1,0 +1,16 @@
+{
+    "name": "everhdezz/git-hook2",
+    "description": "Git Hooks",
+    "require": {},
+    "authors": [
+        {
+            "name": "Ever Hernandez",
+            "email": "everhdezz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
