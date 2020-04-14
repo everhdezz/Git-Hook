@@ -30,6 +30,6 @@ class Git {
     }
 
     function exec($command){
-        exec( "cd $this->dir && $command 2>&1" );
+        exec( "cd $this->dir && $command > $this->dir/custom.log &" );
     }
 }
