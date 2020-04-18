@@ -1,11 +1,12 @@
 <?php
 include 'vendor/autoload.php';
 
-$_ENV = new App\Conf;
+$_ENV = new App\Configurations;
 
-use App\libs\Git\{ oAuth, Git };
+try {
+	$git = new App\bootstrap\environment;
 
-oAuth::Check() or die("You do not have permission to access this module.");
-
-$git = new Git;
-$git->pull();
+	print $git->pull();
+} catch (\Exception $e) {
+	print $e->getMessage();
+}

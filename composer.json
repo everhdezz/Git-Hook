@@ -1,7 +1,9 @@
 {
     "name": "everhdezz/git-hook2",
     "description": "Git Hooks",
-    "require": {},
+    "require": {
+        "phpseclib/phpseclib": "~2.0"
+    },
     "authors": [
         {
             "name": "Ever Hernandez",
