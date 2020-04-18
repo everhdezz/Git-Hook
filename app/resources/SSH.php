@@ -38,6 +38,6 @@ class SSH
     }
 
     function exec($command){
-        return $this->ssh->exec('cd /var/www/vhosts/alsuper.com/html && git pull');
+        return $this->ssh->exec($command);
     }
 }
